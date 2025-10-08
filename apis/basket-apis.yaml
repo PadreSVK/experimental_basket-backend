@@ -1,0 +1,46 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: basket-v1-api
+  namespace: experiments
+  title: Basket API v1
+  description: Version 1 of the Basket API for managing shopping carts
+spec:
+  type: openapi
+  lifecycle: production
+  owner: group:experiments/team-bravo
+  system: system:experiments/basket
+  definition:
+    $text: http://dotnet-demo.flux-test-tenant.svc.cluster.local/.less-known/api-docs/v1.json
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: basket-v2-api
+  namespace: experiments
+  title: Basket API v2
+  description: Version 2 of the Basket API for managing shopping carts
+spec:
+  type: openapi
+  lifecycle: production
+  owner: group:experiments/team-bravo
+  system: system:experiments/basket
+  definition:
+    $text: http://dotnet-demo.flux-test-tenant.svc.cluster.local/.less-known/api-docs/v2.json
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: basket-v3-api
+  namespace: experiments
+  title: Basket API v3
+  description: Version 3 of the Basket API for managing shopping carts
+spec:
+  type: openapi
+  lifecycle: production
+  owner: group:experiments/team-bravo
+  system: system:experiments/basket
+  definition:
+    $text: http://dotnet-demo.flux-test-tenant.svc.cluster.local/.less-known/api-docs/v3.json

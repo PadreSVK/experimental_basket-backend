@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: basket-redis
+  namespace: experiments
+  title: Basket Redis Server
+  description: Redis server for basket system caching and session management
+spec:
+  type: redis-server
+  lifecycle: production
+  owner: group:experiments/team-bravo
+  system: system:experiments/basket
+  environments:
+    - name: development
+      continuous-deployment-enabled: true 
+    - name: staging
+      continuous-deployment-enabled: true 
+    - name: production
+      continuous-deployment-enabled: true 
+  dependsOn:
+    - resource:experiments/k8s-cluster-development
+    - resource:experiments/k8s-cluster-staging
+    - resource:experiments/k8s-cluster-production

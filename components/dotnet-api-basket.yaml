@@ -1,0 +1,25 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: dotnet-api-basket
+  namespace: experiments
+  title: .NET API Basket Service
+  description: .NET API service for basket functionality
+spec:
+  type: dotnet-api
+  lifecycle: production
+  owner: group:experiments/team-bravo
+  system: system:experiments/basket
+  dependsOn:
+    - resource:experiments/basket-redis
+    - resource:experiments/k8s-cluster-development
+    - resource:experiments/k8s-cluster-staging
+    - resource:experiments/k8s-cluster-production
+    - resource:experiments/kafka-topic-basket
+    - resource:experiments/redis-access-dotnet-api-basket-development
+    - resource:experiments/redis-access-dotnet-api-basket-staging
+    - resource:experiments/redis-access-dotnet-api-basket-production
+  providesApis:
+    - api:experiments/basket-v1-api
+    - api:experiments/basket-v2-api
+    - api:experiments/basket-v3-api

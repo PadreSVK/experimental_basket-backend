@@ -1,0 +1,28 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: basket-backend-apis
+  description: APIs for the basket backend system
+spec:
+  targets:
+    - ./apis/*.yaml
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: basket-backend-components
+  description: Components for the basket backend system
+spec:
+  targets:
+    - ./components/*.yaml
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: basket-backend-resources
+  description: Resources for the basket backend system
+spec:
+  targets:
+    - ./resources/*.yaml
