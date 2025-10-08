@@ -15,8 +15,6 @@ spec:
   owner: group:experiments/team-bravo
   system: system:experiments/basket
   provideAccess: component:experiments/dotnet-api-basket
-  dependencyOf:
-    - component:experiments/dotnet-api-basket
   dependsOn:
     - resource:experiments/basket-redis
   environment: "development"
@@ -35,8 +33,6 @@ spec:
   owner: group:experiments/team-bravo
   system: system:experiments/basket
   provideAccess: component:experiments/dotnet-api-basket
-  dependencyOf:
-    - component:experiments/dotnet-api-basket
   dependsOn:
     - resource:experiments/basket-redis
   environment: "staging"
@@ -55,8 +51,6 @@ spec:
   owner: group:experiments/team-bravo
   system: system:experiments/basket
   provideAccess: component:experiments/dotnet-api-basket
-  dependencyOf:
-    - component:experiments/dotnet-api-basket
   dependsOn:
     - resource:experiments/basket-redis
   environment: "production"
