@@ -2,6 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
   name: basket-backend-apis
+  namespace: experiments
   description: APIs for the basket backend system
 spec:
   targets:
@@ -12,6 +13,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
   name: basket-backend-components
+  namespace: experiments
   description: Components for the basket backend system
 spec:
   targets:
@@ -22,6 +24,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
   name: basket-backend-resources
+  namespace: experiments
   description: Resources for the basket backend system
 spec:
   targets:
